@@ -1,0 +1,6 @@
+openssl genrsa -out key.pem  --> Creates Private Key
+
+openssl req -new -key key.pem -out csr --> Create certificate request
+
+openssl x509 -req -days 365 -in csr.pem -signkey key.pem -out cert.pem    --> Create CERTIFICATE
+
